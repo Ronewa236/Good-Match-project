@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Match</title>
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        padding: 0.5rem 0;
+        display: flex;
+        justify-content: center;
+        border: 1px solid gray;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .text-field {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+      }
+      .text-field input {
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+      .csv-output {
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+      }
+    </style>
+    <header>
+      <h1>Good Match</h1>
+    </header>
+
+    <main>
+      <section>
+        <div class="text-field">
+          <label>Person 1 First Name</label>
+          <input data-person-one name="person1" type="text" required />
+        </div>
+        <div class="text-field">
+          <label>Person 2 First Name</label>
+          <input data-person-two name="person2" type="text" required />
+        </div>
+
+        <button class="match-btn" data-match-btn>Find Match</button>
+
+        <div class="text-field">
+          <input
+            data-load-csv
+            accept=".csv"
+            type="file"
+            placeholder="choose a csv file"
+          />
+        </div>
+
+        <p data-result class="result"></p>
+
+        <div data-csv-output class="csv-output"></div>
+
+        <a data-file-download href="">Down text output file</a>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
